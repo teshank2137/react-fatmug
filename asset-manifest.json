@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/react-fatmug/static/css/main.6703e2db.chunk.css",
-    "main.js": "/react-fatmug/static/js/main.e3cf02c7.chunk.js",
-    "main.js.map": "/react-fatmug/static/js/main.e3cf02c7.chunk.js.map",
+    "main.js": "/react-fatmug/static/js/main.c3f21d3c.chunk.js",
+    "main.js.map": "/react-fatmug/static/js/main.c3f21d3c.chunk.js.map",
     "runtime-main.js": "/react-fatmug/static/js/runtime-main.85397d35.js",
     "runtime-main.js.map": "/react-fatmug/static/js/runtime-main.85397d35.js.map",
     "static/js/2.2562c8ff.chunk.js": "/react-fatmug/static/js/2.2562c8ff.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.85397d35.js",
     "static/js/2.2562c8ff.chunk.js",
     "static/css/main.6703e2db.chunk.css",
-    "static/js/main.e3cf02c7.chunk.js"
+    "static/js/main.c3f21d3c.chunk.js"
   ]
 }
