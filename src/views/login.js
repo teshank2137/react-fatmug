@@ -232,7 +232,7 @@ export default function LoginForm() {
               <div className={isError ? "field sup error" : "field sup"}>
                 <input
                   type="email"
-                  id="email"
+                  id="emailsup"
                   onChange={(e) => setEmail(e.target.value)}
                   value={email}
                   placeholder="Email"
@@ -241,7 +241,7 @@ export default function LoginForm() {
               <div className={isError ? "field sup error" : "field sup"}>
                 <input
                   type="text"
-                  id="username"
+                  id="usernamesup"
                   onChange={(e) => setUsername(e.target.value)}
                   value={username}
                   placeholder="Username"
@@ -254,7 +254,7 @@ export default function LoginForm() {
               >
                 <input
                   type="password"
-                  id="password"
+                  id="passwordsup"
                   value={password}
                   placeholder="Password"
                   onChange={(e) => setPassword(e.target.value)}
@@ -267,7 +267,7 @@ export default function LoginForm() {
               >
                 <input
                   type="password"
-                  id="password2"
+                  id="password2sup"
                   value={password2}
                   placeholder="Confirm Password"
                   onChange={(e) => setPassword2(e.target.value)}

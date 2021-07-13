@@ -55,6 +55,29 @@ const StyledListPage = styled.div`
     }
   }
 `;
+const variants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.4,
+    },
+  },
+};
+
+const item = {
+  hidden: {
+    opacity: 0,
+    y: 50,
+  },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+    },
+  },
+};
 
 export default function ArticleListPage() {
   const [page, setPage] = useState(1);
@@ -78,38 +101,52 @@ export default function ArticleListPage() {
         ) : null}
         <MotionScreen>
           <div className="contents">
-            <section className="latest-articles">
+            <motion.section
+              className="latest-articles"
+              variants={variants}
+              initial="hidden"
+              animate="show"
+            >
               {latestArticle.map((article) => (
-                <LatestArticle
-                  id={article.id}
-                  key={article.id}
-                  title={article.title}
-                  username={article.username}
-                  description={article.description.slice(500)}
-                  image_url={
-                    "https://teshank.pythonanywhere.com" + article.image_url ||
-                    "//via.placeholder.com/350x150"
-                  }
-                />
-              ))}
-            </section>
-            <aside>
-              <div className="top-article-headline">TOP ARTICLES</div>
-              <div className="top-articles">
-                {topArticle.map((article) => (
-                  <Article
+                <motion.div variants={item}>
+                  <LatestArticle
                     id={article.id}
                     key={article.id}
                     title={article.title}
                     username={article.username}
-                    description={article.description}
+                    description={article.description.slice(500)}
                     image_url={
                       "https://teshank.pythonanywhere.com" +
                         article.image_url || "//via.placeholder.com/350x150"
                     }
                   />
+                </motion.div>
+              ))}
+            </motion.section>
+            <aside>
+              <div className="top-article-headline">TOP ARTICLES</div>
+              <motion.div
+                className="top-articles"
+                variants={variants}
+                initial="hidden"
+                animate="show"
+              >
+                {topArticle.map((article) => (
+                  <motion.div variants={item}>
+                    <Article
+                      id={article.id}
+                      key={article.id}
+                      title={article.title}
+                      username={article.username}
+                      description={article.description}
+                      image_url={
+                        "https://teshank.pythonanywhere.com" +
+                          article.image_url || "//via.placeholder.com/350x150"
+                      }
+                    />
+                  </motion.div>
                 ))}
-              </div>
+              </motion.div>
             </aside>
           </div>
           <footer>
