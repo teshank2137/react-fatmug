@@ -80,7 +80,7 @@ export default function LandingPage() {
       console.log(token);
       if (token) {
         dispatch(loginUser(token));
-        history.push("/home");
+        history.push("/");
       } else {
         history.push("/auth");
       }
@@ -90,16 +90,16 @@ export default function LandingPage() {
     <StyledLandingPage>
       <nav>
         <h1>
-          <Link to="/home">
+          <Link to="/">
             FATMUG | <span>Greetings! {username}</span>
           </Link>
         </h1>
 
         <section>
-          <Link to={`/home/create`}>
+          <Link to={`/create`}>
             <button className="btn-write">Write</button>
           </Link>
-          <Link to={`${url}/my-articles`}>
+          <Link to={`/my-articles`}>
             <button className="btn-articles">Your Articles</button>
           </Link>
           <Link to={`/auth`}>
@@ -118,16 +118,16 @@ export default function LandingPage() {
       <AnimatePresence>
         <Switch>
           <MotionLayoutProvider>
-            <Route exact path="/home">
+            <Route exact path="/">
               <ArticleListPage />
             </Route>
-            <Route path={`${path}/view/:articleId`}>
+            <Route path={`/view/:articleId`}>
               <ArticleDetails />
             </Route>
-            <Route path={`${path}/create`}>
+            <Route path={`/create`}>
               <CreateArticle />
             </Route>
-            <Route path={`${path}/my-articles`}>
+            <Route path={`/my-articles`}>
               <MyArticles />
             </Route>
           </MotionLayoutProvider>

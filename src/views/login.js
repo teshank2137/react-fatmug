@@ -118,7 +118,7 @@ export default function LoginForm() {
       window.sessionStorage.setItem("user", username);
       setLoading(false);
       setError(false);
-      history.push("/home");
+      history.push("/");
     } else {
       setError(true);
       setLoading(false);
@@ -151,7 +151,7 @@ export default function LoginForm() {
           dispatch(setGlobalUsername(username));
           setLoading(false);
           setError(false);
-          history.push("/home");
+          history.push("/");
         })
         .catch((error) => {
           console.log(error);

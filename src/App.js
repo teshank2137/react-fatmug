@@ -13,7 +13,7 @@ function App() {
             <Route path="/auth">
               <LoginForm />
             </Route>
-            <Route path="/home">
+            <Route path="/">
               <LandingPage />
             </Route>
           </Switch>

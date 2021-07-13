@@ -56,7 +56,7 @@ export const Article = (props) => {
   const history = useHistory();
   const withTransition = useMotion(`article-${props.id}`);
   const callback = useCallback(
-    () => history.push(`${url}/view/${props.id}`),
+    () => history.push(`/view/${props.id}`),
     [history, props.id]
   );
   return (
@@ -114,7 +114,7 @@ export const LatestArticle = (props) => {
   const history = useHistory();
   const withTransition = useMotion(`article-${props.id}`);
   const callback = useCallback(
-    () => history.push(`${url}/view/${props.id}`),
+    () => history.push(`/view/${props.id}`),
     [history, props.id]
   );
   return (
